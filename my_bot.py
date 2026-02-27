@@ -1,7 +1,7 @@
 from secret import my_username
 import time
 import random
-from long_responses import Bohemian_Rhapsody, ethics_rant, pi
+from long_responses import Bohemian_Rhapsody, ethics_rant, pi, activities
 
 time_types = random.choice(["am", "pm"])
 random_right_time = random.randint(1, 12)
@@ -46,7 +46,7 @@ def ask_digits(user_message):
 
 def start(user_message, user_name):
   if user_message == "does robot exist" :
-    return f"{ethics_rant} Does {user_name} exist?"
+    return f"{ethics_rant}"
 
   elif user_message == "write a song" :
     return "under construction, please check back later"
@@ -55,7 +55,7 @@ def start(user_message, user_name):
     return start_pi()
     
   elif user_message == "im bored" :
-    return "under construction, please check back later"
+    return f"Here is a thing you can do to unboredify yourself: {random.choice(activities)}"
   
   elif user_message == "is this the real life" :
     return Bohemian_Rhapsody
@@ -83,4 +83,3 @@ def respond(user_message, user_name):
   if state == "ask_digits":
     return ask_digits(user_message)
   
-
