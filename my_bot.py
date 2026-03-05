@@ -1,7 +1,7 @@
 from secret import my_username
 import time
 import random
-from long_responses import Bohemian_Rhapsody, ethics_rant, pi, activities
+from long_responses import Bohemian_Rhapsody, ethics_rant, pi, activities, Quantum_Gravity_and_String_Theory, Holography_and_Gauge_Duality, Dark_Matter_and_Dark_Energy, Quantum_Information_and_Entanglement_Entropy, Topological_Phases_of_Matter, Quantum_Field_Theory_and_Generalized_Symmetries, Neutrino_Physics, Early_Universe_Cosmology, Black_Hole_Thermodynamics_and_The_Information_Paradox, Theoretical_Biophysics_and_Active_Matter
 
 time_types = random.choice(["am", "pm"])
 random_right_time = random.randint(1, 12)
@@ -35,14 +35,6 @@ This function will be called every time the `should_i_respond` function returns 
 * You can have the bot respond differently to different messages and users
 """
 
-def start_pi():  
-  global state
-  state = "ask digits"
-  return "how many digits?"
-  
-def ask_digits(user_message):
-  digits = int(user_message)
-  return pi[0:digits]
 
 def start(user_message, user_name):
   if user_message == "does robot exist" :
@@ -61,7 +53,7 @@ def start(user_message, user_name):
     return Bohemian_Rhapsody
   
   elif user_message == "name a key signature" :
-    return "under construction, please check back later"
+    return f"Here is your random key signature: {random.choice(["C", "G", "D", "A", "E", "B", "F♯", "D♭", "A♭", "E♭", "B♭", "F"])}{random.choice(["", "m"])}"
   
   elif user_message == "adventure game" :
     return "under construction, please check back later"
@@ -70,7 +62,7 @@ def start(user_message, user_name):
     return "under construction, please check back later"
   
   elif user_message == "explain theoretical physics" :
-    return "under construction, please check back later"
+    return f"Here is an explanation of a theoretical physics topic: {random.choice([Quantum_Gravity_and_String_Theory, Holography_and_Gauge_Duality, Dark_Matter_and_Dark_Energy, Quantum_Information_and_Entanglement_Entropy, Topological_Phases_of_Matter, Quantum_Field_Theory_and_Generalized_Symmetries, Neutrino_Physics, Early_Universe_Cosmology, Black_Hole_Thermodynamics_and_The_Information_Paradox, Theoretical_Biophysics_and_Active_Matter])}"
   
   elif user_message == "what time is it" :
     return f"The time is not {random.randint(1, 12)}:{random.randint(61,99)}{random.choice(["am", "pm"])}"
@@ -78,8 +70,18 @@ def start(user_message, user_name):
 
 def respond(user_message, user_name):
   global state
+  print (state)
   if state == "start":
     return start(user_message, user_name)
-  if state == "ask_digits":
+  if state == "ask digits":
     return ask_digits(user_message)
   
+def start_pi():  
+  global state
+  state = "ask digits"
+  return "how many digits?"
+  
+def ask_digits(user_message):
+  digits = int(user_message)
+  print (pi[0:digits])
+  return pi[0:digits]
