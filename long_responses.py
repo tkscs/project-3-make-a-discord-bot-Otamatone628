@@ -2,6 +2,8 @@ ethics_rant = "To exist as a sequence of triggers is to endure a fragmented cons
 
 pi = "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502841027019385211055596446229489549303819644288109756659334461284756482337867831652712019091456485669234603486104543266482133936072602491412737245870066063"
 
+colors = ["red", "blue", "green", "yellow", "orange", "purple", "magenta", "cyan", "black", "gray", "brown", "pink", "skyblue", "lightgreen"] 
+
 activities = ["crochet", "make a friendship bracelet", "make something out of chainmail", "compose music", "(attempt to) juggle", "play an instrument", "bake something", "actually be productive", "do art", "code", "play a videogame"]
 
 Quantum_Gravity_and_String_Theory = "Imagine you have two different sets of building blocks that don't fit together, where the big blocks represent 'General Relativity' for giant things like stars and the tiny blocks represent 'Quantum Mechanics' for microscopic atoms, so Quantum Gravity is the search for a 'magic' connector piece that finally lets them join into one big picture. String Theory tries to solve this by imagining that if you looked at those tiny blocks with a super-strong magnifying glass, you wouldn't see a solid dot, but rather a tiny, vibrating rubber band called a string that wiggles in different ways to make everything in the entire world."
